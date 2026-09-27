@@ -28,3 +28,10 @@ def find_duplicate_tags(tags: list[str]) -> list[str]:
             if tags[i] == tags[j] and tags[i] not in duplicates:
                 duplicates.append(tags[i])
     return duplicates
+
+
+def average_score(rows: list[dict]) -> float:
+    total = 0
+    for row in rows:
+        total += int(row["score"])
+    return total / len(rows)
